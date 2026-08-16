@@ -2,8 +2,7 @@
   "version": 2,
   "functions": {
     "api/price.js": {
-      "runtime": "nodejs18.x"
+      "runtime": "nodejs18"
     }
   }
 }
-
