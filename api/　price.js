@@ -1,6 +1,6 @@
-import playwright from "playwright";
+const playwright = require("playwright");
 
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   const browser = await playwright.chromium.launch({ headless: true });
   const page = await browser.newPage();
 
@@ -13,4 +13,4 @@ export default async function handler(req, res) {
 
   res.setHeader("Content-Type", "text/html; charset=utf-8");
   res.status(200).send(content);
-}
+};
